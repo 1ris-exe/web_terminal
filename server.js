@@ -1,11 +1,11 @@
 
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 import express from 'express';
 import { Configuration, OpenAIApi } from "openai";
 import * as fs from 'node:fs';
 import * as http from 'http';
 
-dotenv.config({path: './process.env'})
+//dotenv.config({path: './process.env'})
 const portPath = process.env.PORT;
 //const openApiKey = process.env.OPENAI_API_KEY;
 const hostname = process.env.HOSTNAME;
