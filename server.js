@@ -20,10 +20,10 @@ const portPath = process.env.PORT;
 const openApiKey = process.env.OPENAI_API_KEY;
 const hostname = process.env.HOSTNAME;
 const configuration = new Configuration({
-  apiKey: openApiKey,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-console.log(openApiKey);
+console.log(process.env.OPENAI_API_KEY);
 
 
 
