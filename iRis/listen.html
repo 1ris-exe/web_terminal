@@ -311,7 +311,7 @@ $("#term-text").terminal(async function (command, terminal)
             body: JSON.stringify({ command }),
           };
 
-        const userResponse = await fetch(`http://iris.exe-herokuapp.com/ask`, requestOptions)
+        const userResponse = await fetch(`https://mysterious-dusk-00929.herokuapp.com/ask`, requestOptions)
         if (!userResponse.ok) {
             throw new Error("ERROR: Response not recorded");
           }
@@ -402,7 +402,7 @@ terminal.echo(" ");
       </p>
     </div>
 
-<a href = "https://open.spotify.com/artist/2dSZ8lHlYiDFdbdvD0V6vi?si=1mYkH2lOQkaCnbEBq-yuXA" target="_blank">
+<!-- <a href = "https://open.spotify.com/artist/2dSZ8lHlYiDFdbdvD0V6vi?si=1mYkH2lOQkaCnbEBq-yuXA" target="_blank">
   <div class="spotify desktop-icon">
     <div class="spotify__icon desktop-icon__icon">
     </div>
@@ -410,8 +410,8 @@ terminal.echo(" ");
       Spotify
     </p>
   </div>
-</a>
-  <div class="instagram desktop-icon">
+</a> -->
+  <!-- <div class="instagram desktop-icon">
     <div class="instagram__icon desktop-icon__icon">
     </div>
     <p class="instagram__text desktop-icon__text">
@@ -433,7 +433,7 @@ terminal.echo(" ");
         Twitter
       </p>
     </div>
-  </a>
+  </a> -->
 
     <div class="help desktop-icon">
       <button class ="transparent-btn" onclick="openHelpWindow()">
@@ -444,7 +444,7 @@ terminal.echo(" ");
         Help
       </p>
     </div>
-  <a href = "https://www.youtube.com/@irisexe3810" target="_blank">
+  <!-- <a href = "https://www.youtube.com/@irisexe3810" target="_blank">
     <div class="youtube desktop-icon">
       <div class="youtube__icon desktop-icon__icon">
       </div>
@@ -479,8 +479,8 @@ terminal.echo(" ");
         Login
       </p>
     </div>
-  </a>
-  <a href = "stems">
+  </a> -->
+  <!-- <a href = "stems">
     <div class="stems desktop-icon">
       <div class="stems__icon desktop-icon__icon">
       </div>
@@ -488,7 +488,7 @@ terminal.echo(" ");
         Stems
       </p>
     </div>
-  </a>
+  </a> -->
 
 </div>
 </body>
