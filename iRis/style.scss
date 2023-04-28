@@ -102,6 +102,7 @@ body {
     display: none;
     position: absolute;
     bottom: 38px;
+    z-index: 2000;
     
     &-side {
       background: $darkergrey;
@@ -131,8 +132,8 @@ body {
       height: auto;
       
       .icon {
-        width: 50px;
-        height: 40px;
+        width: 1%;
+        height: 1%;
         padding-left: 5px;
         padding-right: 5px;
       }
@@ -178,11 +179,12 @@ body {
   &__menu-sub {
     @include menu;
     flex-direction: column;
-    width: 180px;
-    left: 156px;
+    width: 100%;
+    left: 100%;
     padding: 0;
     display: none;
     position: absolute;
+    z-index: 2000;
       
     .icon {
       width: 23px;
