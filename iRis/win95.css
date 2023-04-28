@@ -338,8 +338,8 @@ body {
   /* Edits by MrShoopa on 12/3/2018 */
   overflow: hidden;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 5%;
   bottom: 0;
   right: 0;
 }
