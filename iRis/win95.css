@@ -318,11 +318,19 @@ body {
   background-color: transparent;
   border: none;
 }
-.transparent-btn:hover{
+
+.transparent-btn-submenu{
   background-color: transparent;
-  border: 1px;
-  cursor:pointer;
+  border: none;
+  min-width: 100%;
+  min-height: 10px;
+  text-align: left;
 }
+.transparent-btn#instagram-sm{
+  background-color: transparent;
+  border: none;
+}
+
 
 .windows-box {
   border: 1px solid;
@@ -359,6 +367,45 @@ body {
   position: absolute;
   top: 10%;
   left: 20%;
+  bottom: 0;
+  right: 0;
+}
+
+.windows-box-stems {
+  border: 1px solid;
+  border-top-color: #c3c7cb;
+  border-left-color: #c3c7cb;
+  background-color: #c0c0c0;
+  border-bottom-color: #444;
+  border-right-color: #000000;
+  width: 240px;
+  height: 200px;
+  z-index: 1000;
+
+  /* Edits by MrShoopa on 12/3/2018 */
+  overflow: hidden;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  bottom: 0;
+  right: 0;
+}
+.windows-box-sm {
+  border: 1px solid;
+  border-top-color: #c3c7cb;
+  border-left-color: #c3c7cb;
+  background-color: #c0c0c0;
+  border-bottom-color: #444;
+  border-right-color: #000000;
+  width: 240px;
+  height: 200px;
+  z-index: 1000;
+
+  /* Edits by MrShoopa on 12/3/2018 */
+  overflow: hidden;
+  position: absolute;
+  top: 5%;
+  left: 10%;
   bottom: 0;
   right: 0;
 }
@@ -582,6 +629,130 @@ button:active {
   height: 10%;
   font-family: "ms95";
 }
+.player-button#play {
+  background: url('https://img.icons8.com/ios-filled/50/null/play--v1.png') no-repeat;
+  background-size: 70%;
+  background-position: center;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+
+.player-button#play:active{
+  border-color: black;
+}
+.player-button#pause{
+  background: url("https://img.icons8.com/ios-filled/50/null/pause--v1.png") no-repeat;
+  background-position: center;
+  background-size: 70%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+.player-button#pause:active{
+  border-color: black;
+}
+
+.player-button#stop{
+  background: url("https://img.icons8.com/ios-filled/50/null/stop.png") no-repeat;
+  background-position: center;
+  background-size: 70%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+.player-button#stop:active{
+  border-color: black;
+}
+
+.player-button#next{
+  background: url("https://img.icons8.com/ios-filled/50/null/fast-forward.png") no-repeat;
+  background-position: center;
+  background-size: 70%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+.player-button#next:active{
+  border-color: black;
+}
+.player-button#prev{
+  background: url("https://img.icons8.com/ios-filled/50/null/rewind.png") no-repeat;
+  background-position: center;
+  background-size: 70%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+.player-button#prev:active{
+  border-color: black;
+}
+.player-button#eject{
+  background: url("https://img.icons8.com/ios-filled/50/null/eject.png") no-repeat;
+  background-position: center;
+  background-size: 70%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 10%;
+  font-family: "ms95";
+}
+.player-button#eject:active{
+  border-color: black;
+}
+
 .player-button-skip {
   margin-right: -3px;
   margin-bottom: 4.5px;
@@ -668,6 +839,47 @@ button:active {
   background-color: #c3c7cb;
   border-bottom-color: #c3c7cb;
   border-right-color: #c3c7cb;
+}
+#instagram-sm{
+  background: url("https://img.icons8.com/color/48/null/instagram.png") no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 20%;
+  font-family: "ms95";
+}
+.button-sm#instagram-sm:active{
+  border-color: black;
+}
+
+.button-sm#twitter-sm{
+  background: url("https://img.icons8.com/fluency/48/null/twitter.png") no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-right: -3px;
+  margin-bottom: 4.5px;
+  padding-left: 5px;
+  border: 1px solid;
+  border-top-color: #ffffff;
+  border-left-color: #dbdada;
+  background-color: #c0c0c0;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  width: 20%;
+  height: 20%;
+  font-family: "ms95";
+}
+#twitter-sm:active{
+  border-color: black;
 }
 
 .col.s6.secondary-timer {

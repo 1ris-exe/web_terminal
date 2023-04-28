@@ -50,21 +50,26 @@
            <div class="start__menu-main-items-item-arrowright"></div>
            <ul class="start__menu-sub sub__programs">
              <li class="start__menu-sub-items-item sub__programs-items">
-               <img class="accessories-img icon" src="https://win98icons.alexmeub.com/icons/png/directory_favorites-3.png" />
-               <p class="start__menu-sub-items-item-title accessories">Favorites</p>
-               <div class="start__menu-main-items-item-arrowright"></div>
+              
+              <button class ="transparent-btn-submenu" onclick="openSocialMediaWindow()">
+                <p class="start__menu-sub-items-item-title accessories">
+               Social Media</p>
+          
+              </button>
              </li>
              
              <li class="start__menu-sub-items-item sub__programs-items">
-               <img class="startup-img icon" src="https://win98icons.alexmeub.com/icons/png/appwizard-5.png" alt="StartUp"/>
-               <p class="start__menu-sub-items-item-title startup">StartUp</p>
-               <div class="start__menu-main-items-item-arrowright"></div>
+              <button class ="transparent-btn-submenu" onclick="openMPWindow()">
+               <p class="start__menu-sub-items-item-title startup">iRis Media Player</p>
+            
+              </button>
              </li>
              
              <li class="start__menu-sub-items-item sub__programs-items">
-               <img class="dos-img icon" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Msdos-icon.png"/>
-               <p class="start__menu-sub-items-item-title dos">MS-DOS Prompt</p>
-               <div class="start__menu-main-items-item-arrowright"></div>
+              <button class ="transparent-btn-submenu" onclick="openTermWindow()">
+               <p class="start__menu-sub-items-item-title dos">iRis.EXE</p>
+            
+              </button>
              </li>
            </ul>
          </li>
@@ -72,8 +77,24 @@
            <img class="documents-img icon" src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-5.png"/>
            <p class="start__menu-main-items-item-title documents"><span class="underline">D</span>ocuments</p>
            <div class="start__menu-main-items-item-arrowright"></div>
+           <ul class="start__menu-sub sub__documents">
+            <li class="start__menu-sub-items-item sub__documents-items">
+             
+             <button class ="transparent-btn-submenu" onclick="openLyricWindow()">
+               <p class="start__menu-sub-items-item-title accessories">
+              Lyrics</p>
+         
+             </button>
+            </li>
+            
+            <li class="start__menu-sub-items-item sub__documents-items">
+             <button class ="transparent-btn-submenu" onclick="openStemsWindow()">
+              <p class="start__menu-sub-items-item-title startup">Stems</p>
            
-         </li>
+             </button>
+            </li>
+          </ul>
+        </li>
          <li class="start__menu-main-items-item settings">
            <img class="settings-img icon" src="https://win98icons.alexmeub.com/icons/png/settings_gear-2.png"/>
            <p class="start__menu-main-items-item-title settings"><span class="underline">S</span>ettings</p>
@@ -140,24 +161,24 @@
         <div class="col s6">
             <div class="player-control">
                 <div class="player-control-top">
-                    <button class="player-button" id = "play"> &#9658;</button>
-                    <button class="player-button" id = "pause"> &#10074;&#10074;</button>
-                    <button class="player-button" id = "stop"> &#9724;</button>
+                    <button class="player-button" id = "play"> </button>
+                    <button class="player-button" id = "pause"> </button>
+                    <button class="player-button" id = "stop"> </button>
                 </div>
                 <div class="player-control-bottom">
-                    <button class="player-button" id= "prev"> &#x23EE;</button>   
+                    <button class="player-button" id= "prev"> </button>   
 
 
                      <!-- DO NOT UNCOMMENT THIS LINE !!!! <button class="player-button-back" id="prev"> &#x23F4;</button> -->
 
 
-                     <button class="player-button" id= "next"> &#x23ED;</button> 
+                     <button class="player-button" id= "next"> </button> 
 
 
                     <!-- DO NOT UNCOMMENT THIS LINE !!!! <button class="player-button-skip" id ="next"> &#x23ED;</button> -->
 
 
-                    <button class="player-button"> &#x23cf;</button>
+                    <button class="player-button" id="eject"> </button>
                 </div>
             </div>
         </div>
@@ -227,8 +248,8 @@
               <li class="toolbar-item" class="windows-link">mercykiller </li></button>
               <button class="transparent-btn" id="transparent-btn" onclick="popChemicalBleedLyrics()">
               <li class="toolbar-item" class="windows-link">chemical bleed </li></button>
-              <button class="transparent-btn" id="transparent-btn" onclick="popSanctuaryLyrics()">
-              <li class="toolbar-item" class="windows-link">sanctuary  </li></button>
+              <!--<button class="transparent-btn" id="transparent-btn" onclick="popSanctuaryLyrics()">
+              <li class="toolbar-item" class="windows-link">sanctuary  </li></button>-->
               
           </ul>
       </div>
@@ -239,6 +260,72 @@
   </div>
 </div>
 </div>
+<!-- STEMS POP UP BOX !! :) -->
+<div id = "pop-up-wrapper" class="pop-up-wrapper">
+  <div class="windows-box-stems">
+    <div class="windows">
+        <div class="windows-header">
+            <div class="windows-title">
+              <button class = "windows-close-btn"id="windows-close-btn" onclick="closeStemWindow()">X</button>
+                <span class="cd-player icon">
+                </span>
+                <span class="cd-player text">
+                    stems
+                </span>
+            </div>
+        </div>
+        <div class="windows-container">
+            <ul class="windows-toolbar">
+               
+                <li class="toolbar-item" class="windows-link">File </li>
+
+                <!--<button class="transparent-btn" id="transparent-btn" onclick="popSanctuaryLyrics()">
+                <li class="toolbar-item" class="windows-link">sanctuary  </li></button>-->
+                
+            </ul>
+        </div>
+    </div>
+    <div id="lyric-scroller" class="player-input-lyrics">
+      <p id = "lyrics">links to download stems for different songs</p>
+  
+    </div>
+  </div>
+  </div>
+
+<!-- SOCIAL MEDIA POP UP BOX !! :) -->
+<div id = "socialmedia-wrapper" class="pop-up-wrapper">
+  <div class="windows-box-sm">
+    <div class="windows">
+        <div class="windows-header">
+            <div class="windows-title">
+              <button class = "windows-close-btn"id="windows-close-btn" onclick="closeSocialMediaWindow()">X</button>
+                <span class="cd-player icon">
+                </span>
+                <span class="cd-player text">
+                    social media
+                </span>
+            </div>
+        </div>
+        <div class="windows-container">
+            <ul class="windows-toolbar">
+               
+                <li class="toolbar-item" class="windows-link">file </li></button>
+            
+                <!--<button class="transparent-btn" id="transparent-btn" onclick="popSanctuaryLyrics()">
+                <li class="toolbar-item" class="windows-link">sanctuary  </li></button>-->
+                
+            </ul>
+        </div>
+    </div>
+    <div id="lyric-scroller" class="player-input-lyrics">
+      <p id = "lyrics">
+        <a href="https://www.instagram.com/1Ris.exe/"><img src ="https://img.icons8.com/color/48/null/instagram.png"> </a>
+        <a href="https://www.twitter.com/1Ris_exe/"><img src ="https://img.icons8.com/fluency/48/null/twitter.png"> </a>
+      </p>
+  
+    </div>
+  </div>
+  </div>
 
 <!-- HELP WINDOW !! :) -->
 <div id = "help-wrapper" class="pop-up-wrapper">
@@ -257,17 +344,16 @@
         <div class="windows-container">
             <ul class="windows-toolbar">
                <button class="transparent-btn" id="transparent-btn" onclick="logOnInfo()">
-                <li class="toolbar-item" class="windows-link">logging in </li></button>
+                <li class="toolbar-item" class="windows-link">what's next </li></button>
                 <button class="transparent-btn" id="transparent-btn" onclick="irisTerminalHelp()">
                 <li class="toolbar-item" class="windows-link">iRis.EXE </li></button>
-                <button class="transparent-btn" id="transparent-btn" onclick="contact()">
-                <li class="toolbar-item" class="windows-link">contact  </li></button>
                 
             </ul>
         </div>
     </div>
     <div id="lyric-scroller" class="player-input-lyrics">
-      <p id = "helpText">hi, welcome :] feel free to click around and explore as you please.<br> click the tabs above for more information on important features.</p>
+      <p id = "helpText">hi, welcome :] feel free to click around and explore as you please.<br> click the tabs above for more information on important features.<br>
+        this web app was created with desktop in mind, so please bare with mobile quirks as they pop up.<br></p>
   
     </div>
   </div>

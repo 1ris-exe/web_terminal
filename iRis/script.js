@@ -39,9 +39,10 @@ var startMenu = document.querySelector(".start__menu-main");
 var body = document.querySelector("body");
 
 let programsItem = document.querySelector(".programs");
+let documentsItem = document.querySelector(".documents");
 
 let programsMenu = document.querySelector(".sub__programs");
-
+let documentsMenu = document.querySelector(".sub__documents");
 // Start menu appear on click of start button and disappear on click of start button or anything else except the menu
 
 body.onclick = function(e) {
@@ -72,6 +73,10 @@ programsItem.addEventListener("click", function() {
   menuDisplay(programsMenu);
 });
 
+documentsItem.addEventListener("click", function() {
+  menuDisplay(documentsMenu);
+});
+
 // Make the desktop icons draggable
 
 var desktopIcons = document.getElementsByClassName("desktop-icon");
@@ -91,6 +96,27 @@ var lyricBox = document.getElementsByClassName("windows-box-lyrics");
 for (let i = 0; i < lyricBox.length; i++) {
   dragElement(lyricBox[i]);
 }
+
+//make terminal box draggable
+var termBox = document.getElementsByClassName("windows-box-term");
+
+for (let i = 0; i < termBox.length; i++) {
+  dragElement(termBox[i]);
+}
+
+//make help box draggable
+var helpBox = document.getElementsByClassName("windows-box-lyrics");
+
+for (let i = 0; i < helpBox.length; i++) {
+  dragElement(helpBox[i]);
+}
+//make sm box draggable
+var smBox = document.getElementsByClassName("windows-box-sm");
+
+for (let i = 0; i < smBox.length; i++) {
+  dragElement(smBox[i]);
+}
+
 // to drag element
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -127,6 +153,8 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+//Open Windows!!
 
 function openLyricWindow() {
   var box = document.getElementById("pop-up-wrapper"); 
@@ -364,17 +392,70 @@ function popSanctuaryLyrics(){
 
 function logOnInfo(){
   document.getElementById('helpText')
-  .innerHTML='logging in will soon be required for certain features like downloading stems and joining the chat room.';
+  .innerHTML='features in development: <br> > chat room <br> > iRis_v3';
 }
 
 function irisTerminalHelp(){
   document.getElementById('helpText')
-  .innerHTML='this will be a list of FAQ about iris';
+  .innerHTML='iRis.EXE is a node.js application utilizing an express backend, a terminal jquery library,<br>'+
+  'a windows 98 frontend library, and an openai gpt-3 model i fine-tuned with python.<br><br>'+
+  'with the exception of openai, most everything built upon is open-source.<br>'+
+  'please support those creators: <br>'+
+  '> <a href="https://github.com/jcubic/jquery.terminal">jquery terminal</a><br>'+
+  '> <a href="https://jdan.github.io/98.css/">windows98</a><br>'+
+  '------------------<br>'+
+  '> <a href="https://github.com/1ris-exe/web_terminal">my github </a> <br>'+
+  'please bare with me as i am not typically a front-end developer :] <br>'+
+  'i will post a series of tutorials soon for this site. thank you!';
 }
 function contact(){
   document.getElementById('helpText')
   .innerHTML='idk probably include my contact info here or something. maybe a form';
 }
+
+function openSocialMediaWindow(){
+  var box = document.getElementById("socialmedia-wrapper"); 
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+function closeSocialMediaWindow(){
+  var box = document.getElementById("socialmedia-wrapper"); 
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+
+function openStemsWindow(){
+  var box = document.getElementById("windows-box-stems"); 
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+function closeStemsWindow(){
+  var box = document.getElementById("windows-box-stems"); 
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+
+function navInstagram(){
+  location.href='https://www.instagram.com/1Ris.exe/';
+
+}
+function navTwitter(){
+  location.href='https://www.twitter.com/1Ris_exe/';
+
+}
+
 
 
 
