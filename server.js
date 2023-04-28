@@ -129,7 +129,7 @@ const server = http.createServer((req, res) => {
   /* Serving static files on specific Routes */
   if(url === "/iRis") 
   {
-      readAndServe("localhost:3000/iRis.listen.html",res) 
+      readAndServe("iRis/listen.html",res) 
     }
     else if(url === "/home")
     {
