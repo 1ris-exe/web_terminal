@@ -435,8 +435,13 @@ function closeSocialMediaWindow(){
 }
 
 function openStemsWindow(){
-  var box = document.getElementById('stems-wrapper'); 
-console.log("Reached");
+  // var box = document.getElementById("stems-wrapper"); 
+  // if (box.style.display === "none") {
+  //   box.style.display = "block";
+  // } else {
+  //   box.style.display = "none";
+  // }
+  console.log("reached");
 }
 
 

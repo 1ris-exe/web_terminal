@@ -392,7 +392,7 @@
 $(function() {
 $("#term-text").terminal(async function (command, terminal) 
 
-{ if (command != "mercykill"){
+{ 
     try {
         const requestOptions = {
             method: "POST",
@@ -413,13 +413,10 @@ $("#term-text").terminal(async function (command, terminal)
         let errmsg = $('<div id = "terminal-error-mn"> [[ERROR 503: system_overload]]<br>MESSAGE: iRis is currently overloaded with other requests.<br>Please try again later. </div>')
         terminal.echo(errmsg);
       }
-    } else {
-      document.body.style.display = "none";
-  }
     }, 
 
 {
-    greetings: "iRis --v2.1.1[BETA]\nlast commit 04282023 20:25:31 by user@mad\nRead 'Help' document for bug workarounds.\nType 'mercykill' to end program.",
+    greetings: "iRis --v2.1.1[BETA]\nlast commit 04282023 20:25:31 by user@mad",
     keepWords: true,
     numChar: 80,
     prompt: '>>',
