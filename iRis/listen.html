@@ -411,7 +411,7 @@ $("#term-text").terminal(async function (command, terminal)
         console.log("Completed!");
     } catch (err) {
         console.error(err, "err");
-        let errmsg = $('<div id = "terminal-error-mn"> [[ERROR: system_failure]]</div>')
+        let errmsg = $('<div id = "terminal-error-mn"> [[ERROR 503: system_overload]]<br>MESSAGE: iRis is currently overloaded with other requests.<br>Please try again later. </div>')
         terminal.echo(errmsg);
       }
 
