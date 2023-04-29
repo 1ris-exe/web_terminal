@@ -417,12 +417,12 @@ body {
   background-color: #c0c0c0;
   border-bottom-color: #444;
   border-right-color: #000000;
-  width: 80%;
+  width: 95%;
   height: 90%;
   z-index: 1000;
 
   /* Edits by MrShoopa on 12/3/2018 */
-  overflow: hidden;
+  overflow-y:scroll;
   position: absolute;
   top: 0%;
   left: 0%;
