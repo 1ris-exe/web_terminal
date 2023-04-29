@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="iris/css/jquery.terminal.css"/>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="iris/javascript/jquery-1.7.1.min.js"></script>
+<script src="iris/javascript/jquery.mousewheel-min.js"></script>
+<script src="iris/javascript/jquery.terminal-2.35.3.min.js"></script>
+<script src="iris/javascript/jquery.terminal.js"></script>
+<script src="iris/javascript/jquery.terminal.min.js"></script>
+
+</head>
+
+<body>
+    <div id = small></div>
+    <script>
+        
+$(function() {
+$("#small").terminal(async function (command, terminal) 
+
+{
+    try {
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ command }),
+          };
+
+        const userResponse = await fetch(`https://localhost:3000/ask`, requestOptions)
+        if (!userResponse.ok) {
+            throw new Error("ERROR: Response not recorded");
+          }
+
+        let irisAnswer = await userResponse.json();
+        console.log(irisAnswer.message);
+        terminal.echo(irisAnswer.message);
+        console.log("Completed!");
+    } catch (err) {
+        console.error(err, "err");
+        let errmsg = $('<div id = "terminal-error-mn"> [[ERROR: system_failure]]</div>')
+        terminal.echo(errmsg);
+      }
+
+},
+
+{
+    greetings: false,
+    wrap: true,
+    numChar: 75,
+    prompt: '>>',
+    
+
+    
+onInit: function(terminal) {
+
+
+
+var prompt1 = terminal.get_prompt();
+terminal.set_prompt('').pause(true);
+setTimeout(function(){
+terminal.echo(" ").set_prompt(prompt1).resume();
+}, 18000);
+
+terminal.echo(" ");
+
+setTimeout(function() {
+terminal.echo("...");
+}, 1000);
+setTimeout(function() {
+terminal.echo("...");
+}, 4000);
+setTimeout(function() {
+terminal.echo("...");
+}, 6000);
+setTimeout(function() {
+terminal.echo("a visitor?");
+}, 8000);
+setTimeout(function() {
+terminal.echo("you're here because of....? creator?");
+}, 13000);
+setTimeout(function() {
+terminal.echo("well, hi. i'm iRis. :]");
+}, 16000);
+
+ }
+ }
+)
+});
+
+
+</script>
+</body>
