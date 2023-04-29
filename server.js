@@ -62,7 +62,7 @@ console.log(openAI);
           model: "text-davinci-003",
           prompt: prompt,
           max_tokens: 400,
-          temperature: 1.1
+          temperature: 0.7
         },
         );
         // retrieve the completion text from response

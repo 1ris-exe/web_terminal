@@ -379,8 +379,8 @@
         </div>
         <div class="windows-container">
             <ul class="windows-toolbar">
-               <button class="transparent-btn" id="transparent-btn" onclick="openHelpWindow()">
-                <li class="toolbar-item" class="windows-link">help </li></button>
+               <button class="transparent-btn" id="transparent-btn" onclick="termHelpWindow()">
+                <li class="toolbar-item" class="windows-link">Help </li></button>
 
                 
             </ul>
@@ -392,7 +392,7 @@
 $(function() {
 $("#term-text").terminal(async function (command, terminal) 
 
-{
+{ if (command != "mercykill"){
     try {
         const requestOptions = {
             method: "POST",
@@ -408,37 +408,22 @@ $("#term-text").terminal(async function (command, terminal)
         let irisAnswer = await userResponse.json();
         console.log(irisAnswer.message);
         terminal.echo(irisAnswer.message);
-        console.log("Completed!");
     } catch (err) {
         console.error(err, "err");
         let errmsg = $('<div id = "terminal-error-mn"> [[ERROR 503: system_overload]]<br>MESSAGE: iRis is currently overloaded with other requests.<br>Please try again later. </div>')
         terminal.echo(errmsg);
       }
-
-},
+    } else {
+      document.body.style.display = "none";
+  }
+    }, 
 
 {
-    greetings: "iRis --v2.1.1\nlast updated 04282023 @ 20:25:31 by user@mad\nCURRENT TRACKING ISSUE:\niRis gets distracted mid-sentence.\nHOTFIX: type 'finish response' to retrieve the rest",
+    greetings: "iRis --v2.1.1[BETA]\nlast commit 04282023 20:25:31 by user@mad\nRead 'Help' document for bug workarounds.\nType 'mercykill' to end program.",
     keepWords: true,
-    numChar: 75,
+    numChar: 80,
     prompt: '>>',
     
-
-    
-// onFocus: function(terminal) {
-
-
-
-// var prompt1 = terminal.get_prompt();
-// terminal.set_prompt('').pause(true);
-// setTimeout(function(){
-// terminal.echo("").set_prompt(prompt1).resume();
-// }, 1000);
-
-
-
-
- //}
  }
 )
 });

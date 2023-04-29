@@ -1,5 +1,8 @@
 // Update the time box in the start bar every 10 seconds
 
+//keypress to refresh page in case of error
+
+
 function updateTime(){
   var today = new Date();
   var hours24 = today.getHours();
@@ -95,13 +98,6 @@ var lyricBox = document.getElementsByClassName("windows-box-lyrics");
 
 for (let i = 0; i < lyricBox.length; i++) {
   dragElement(lyricBox[i]);
-}
-
-//make terminal box draggable
-var termBox = document.getElementsByClassName("windows-box-term");
-
-for (let i = 0; i < termBox.length; i++) {
-  dragElement(termBox[i]);
 }
 
 //make help box draggable
@@ -394,6 +390,14 @@ function logOnInfo(){
   document.getElementById('helpText')
   .innerHTML='features in development: <br> > chat room <br> > iRis_v3';
 }
+function termHelpWindow(){
+  document.getElementById('term-text')
+  .innerHTML='CURRENT ISSUES BEING TRACKED:<br>'+
+  '> unable to close terminal<br>'+
+  '-----WORKAROUND: refresh, or type "mercykill" to close<br'+
+  '> iRis stops mid-sentence<br>'+
+  '-----WORKAROUND: type "finish sentence"';
+}
 
 function irisTerminalHelp(){
   document.getElementById('helpText')
@@ -431,30 +435,11 @@ function closeSocialMediaWindow(){
 }
 
 function openStemsWindow(){
-  var box = document.getElementById("windows-box-stems"); 
-  if (box.style.display === "none") {
-    box.style.display = "block";
-  } else {
-    box.style.display = "none";
-  }
-}
-function closeStemsWindow(){
-  var box = document.getElementById("windows-box-stems"); 
-  if (box.style.display === "none") {
-    box.style.display = "block";
-  } else {
-    box.style.display = "none";
-  }
+  var box = document.getElementById('stems-wrapper'); 
+console.log("Reached");
 }
 
-function navInstagram(){
-  location.href='https://www.instagram.com/1Ris.exe/';
 
-}
-function navTwitter(){
-  location.href='https://www.twitter.com/1Ris_exe/';
-
-}
 
 
 
