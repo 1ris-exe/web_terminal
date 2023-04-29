@@ -9,7 +9,7 @@
     "start": "node server.js & npm run scss",
     "scss": "sass --watch iRis/style.scss iRis/style.css"
   },
-  "author": "",
+  "author": "mad",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -18,5 +18,13 @@
     "nodefs": "^0.0.2",
     "openai": "^3.2.1",
     "sass": "^1.62.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1ris-exe/web_terminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/1ris-exe/web_terminal/issues"
+  },
+  "homepage": "https://github.com/1ris-exe/web_terminal#readme"
 }

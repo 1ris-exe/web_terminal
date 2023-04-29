@@ -98,7 +98,7 @@ body {
   
   &__menu-main {
     @include menu;
-    width: 20%;
+    width: 30%;
     display: none;
     position: absolute;
     bottom: 38px;
@@ -276,8 +276,8 @@ body {
   }
 }
 .stems {
-  top: 220px;
-  left: 210px;
+  top: 120px;
+  left: 110px;
   
   &__icon {
     width: 50px;

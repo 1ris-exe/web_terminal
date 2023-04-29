@@ -820,6 +820,9 @@ button:active {
 .pop-up-wrapper{
   display:none;
 }
+.stems-wrapper{
+  display:none;
+}
 
 .fullterminal-wrapper{
   display:none;

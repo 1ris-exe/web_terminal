@@ -261,7 +261,7 @@
 </div>
 </div>
 <!-- STEMS POP UP BOX !! :) -->
-<div id = "pop-up-wrapper" class="pop-up-wrapper">
+<div id = "stems-wrapper" class="pop-up-wrapper">
   <div class="windows-box-stems">
     <div class="windows">
         <div class="windows-header">
@@ -270,7 +270,7 @@
                 <span class="cd-player icon">
                 </span>
                 <span class="cd-player text">
-                    stems
+                    Stems
                 </span>
             </div>
         </div>
@@ -286,7 +286,10 @@
         </div>
     </div>
     <div id="lyric-scroller" class="player-input-lyrics">
-      <p id = "lyrics">links to download stems for different songs</p>
+      <p id = "lyrics">
+        <a href="placeholder">mercykiller</a>
+        <a href="placeholder">chemical bleed</a>
+      </p>
   
     </div>
   </div>
@@ -397,7 +400,7 @@ $("#term-text").terminal(async function (command, terminal)
             body: JSON.stringify({ command }),
           };
 
-        const userResponse = await fetch(`http://localhost:3000/ask`, requestOptions)
+        const userResponse = await fetch(`/ask`, requestOptions)
         if (!userResponse.ok) {
             throw new Error("ERROR: Response not recorded");
           }
@@ -415,28 +418,27 @@ $("#term-text").terminal(async function (command, terminal)
 },
 
 {
-    greetings: "iRis --v2.1.1, last updated 04272023 @ 14:25:31 by user@mad",
-    wrap: true,
+    greetings: "iRis --v2.1.1\nlast updated 04282023 @ 20:25:31 by user@mad\nCURRENT TRACKING ISSUE:\niRis gets distracted mid-sentence.\nHOTFIX: type 'finish response' to retrieve the rest",
+    keepWords: true,
     numChar: 75,
     prompt: '>>',
     
 
     
-onFocus: function(terminal) {
+// onFocus: function(terminal) {
 
 
 
-var prompt1 = terminal.get_prompt();
-terminal.set_prompt('').pause(true);
-setTimeout(function(){
-terminal.echo(" ").set_prompt(prompt1).resume();
-}, 2000);
-
-terminal.echo(" ");
+// var prompt1 = terminal.get_prompt();
+// terminal.set_prompt('').pause(true);
+// setTimeout(function(){
+// terminal.echo("").set_prompt(prompt1).resume();
+// }, 1000);
 
 
 
- }
+
+ //}
  }
 )
 });
@@ -465,6 +467,15 @@ terminal.echo(" ");
   </button>
     <p class="documents__text desktop-icon__text">
       Lyrics
+    </p>
+  </div>
+  <div class="stems desktop-icon">
+    <button class ="transparent-btn" onclick="openStemsWindow()">
+    <div class="stems__icon desktop-icon__icon">
+    </div>
+  </button>
+    <p class="stems__text desktop-icon__text">
+      Stems
     </p>
   </div>
 
